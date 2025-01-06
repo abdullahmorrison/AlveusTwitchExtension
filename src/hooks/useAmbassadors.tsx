@@ -50,12 +50,12 @@ const apiSchema = z.object({
 
 type Ambassador = z.infer<typeof apiAmbassadorSchema>;
 
-const websiteUrl = process.env.REACT_APP_WEBSITE_URL?.replace(/\/+$/, "");
-if (!websiteUrl)
-  throw new Error("REACT_APP_WEBSITE_URL environment variable is not set");
+const apiBaseUrl = process.env.REACT_APP_API_BASE_URL?.replace(/\/+$/, "");
+if (!apiBaseUrl)
+  throw new Error("REACT_APP_API_BASE_URL environment variable is not set");
 
 const fetchAmbassadors = async (): Promise<Record<string, Ambassador>> => {
-  const response = await fetch(`${websiteUrl}/api/stream/ambassadors`);
+  const response = await fetch(`${apiBaseUrl}/api/stream/ambassadors`);
   if (!response.ok)
     throw new Error(
       `Failed to fetch ambassadors: ${response.status} ${response.statusText} ${await response.text()}`,

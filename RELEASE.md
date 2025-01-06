@@ -6,7 +6,7 @@ All new versions start in local test where the base URI is `https://localhost:80
 
 The "panel viewer path" should be `panel.html`, the "mobile viewer path" as `mobile.html`, and "video - fullscreen viewer path" as `video_overlay.html`.
 
-Ensure that the allowlist for image domains is set to allow `https://www.alveussanctuary.org` for ambassador images, the allowlist for media domains is set to allow `https://fonts.googleapis.com/` for fonts, and that allowlist for URL fetching domains is set to include `wss://irc-ws.chat.twitch.tv:443`, `ws://irc-ws.chat.twitch.tv:80`, `irc://irc.chat.twitch.tv:6667`, `irc://irc.chat.twitch.tv:6697` to allow connecting to chat as well as `https://www.alveussanctuary.org` to allow fetching ambassador data.
+Ensure that the allowlist for image domains is set to allow `https://www.alveussanctuary.org` for ambassador images, the allowlist for media domains is set to allow `https://fonts.googleapis.com/` for fonts, and that allowlist for URL fetching domains is set to include `wss://irc-ws.chat.twitch.tv:443`, `ws://irc-ws.chat.twitch.tv:80`, `irc://irc.chat.twitch.tv:6667`, `irc://irc.chat.twitch.tv:6697` to allow connecting to chat as well as `https://ext.alveus.gg` to allow fetching ambassador data.
 
 ## Hosted test
 
@@ -55,7 +55,8 @@ Allowlist explanations:
 
     - `https://fonts.googleapis.com/` Google Fonts, for loading fonts in the extension
     - `wss://irc-ws.chat.twitch.tv:443`, `ws://irc-ws.chat.twitch.tv:80`, `irc://irc.chat.twitch.tv:6667`, `irc://irc.chat.twitch.tv:6697` Twitch chat URLs, for the chatbot to connect to
-    - `https://www.alveussanctuary.org` Alveus Sanctuary website, for fetching ambassador data + images
+    - `https://www.alveussanctuary.org` Alveus Sanctuary website, for fetching ambassador images
+    - `https://ext.alveus.gg` Alveus Sanctuary website (cached API), for fetching ambassador data
 
 Testing the Extension:
 
